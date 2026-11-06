@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { traditions } from "@/content/traditions";
 import { regions } from "@/content/regions";
 import { events } from "@/content/events";
@@ -17,14 +18,12 @@ export default function Home() {
     <>
       {/* 1 Hero */}
       <section className="on-dark proscenium text-parchment relative overflow-hidden">
-        <svg aria-hidden viewBox="0 0 400 520" className="hidden lg:block absolute right-[2%] bottom-0 h-[72%] text-gold/45" fill="none" stroke="currentColor" strokeWidth="1.4">
-          <path d="M20 520V200a180 180 0 0 1 360 0v320" /><path d="M60 520V205a140 140 0 0 1 280 0v315" /><path d="M100 520V210a100 100 0 0 1 200 0v310" />
-          <circle cx="200" cy="96" r="14" /><path d="M0 520h400" />
-        </svg>
-        <div className="mx-auto max-w-7xl px-5 pt-24 pb-28 md:pt-36 md:pb-40">
+        <Image src="/photos/banner.jpg" alt="Performers in Koothu costume seated on carved temple steps beside brass lamps" fill priority sizes="100vw" className="object-cover object-[30%_center]" />
+        <div aria-hidden className="absolute inset-0 bg-[#2a0f18]/75 lg:bg-gradient-to-l lg:from-[#2a0f18]/90 lg:from-35% lg:via-[#2a0f18]/55 lg:via-60% lg:to-transparent" />
+        <div className="relative mx-auto max-w-7xl px-5 pt-24 pb-28 md:pt-32 md:pb-32 lg:pl-[58%] lg:pt-20 lg:pb-24">
           <Reveal><SectionLabel dark>Sri Lankan Traditional Theatre</SectionLabel></Reveal>
-          <Reveal delay={0.1}><h1 className="font-serif text-5xl md:text-8xl mt-6 leading-[0.98] max-w-5xl">Traditional Koothu of Sri Lanka</h1></Reveal>
-          <Reveal delay={0.2}><p className="font-serif italic text-2xl md:text-4xl text-gold mt-6">Explore a Living Theatrical Heritage</p></Reveal>
+          <Reveal delay={0.1}><h1 className="font-serif text-5xl md:text-6xl lg:text-5xl xl:text-6xl mt-6 leading-[1.02]">Traditional Koothu of Sri Lanka</h1></Reveal>
+          <Reveal delay={0.2}><p className="font-serif italic text-2xl md:text-3xl text-gold mt-5">Explore a Living Theatrical Heritage</p></Reveal>
           <Reveal delay={0.3}><p className="mt-8 max-w-xl text-lg text-cream/85 leading-relaxed">Explore the performance traditions, cultural histories, communities, and living theatrical heritage of Sri Lanka.</p></Reveal>
           <Reveal delay={0.4}>
             <div className="mt-10 flex flex-wrap gap-4">
