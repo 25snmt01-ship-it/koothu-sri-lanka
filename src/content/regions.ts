@@ -22,7 +22,7 @@ export const regions: Region[] = [
     name: "Mullaitivu",
     province: "Northern Province",
     summary:
-      "A district on the north-eastern coast. No Koothu forms are recorded for this region yet. Documented contributions are welcome.",
+      "A district on the north-eastern coast. Kathavarayan Koothu and Kovalan Koothu are reported here.",
     grid: { col: 3, row: 2 },
   },
   {
@@ -30,7 +30,7 @@ export const regions: Region[] = [
     name: "Vavuniya",
     province: "Northern Province",
     summary:
-      "An inland district of the Northern Province. Parai Mela Koothu, Panni Koothu and Magudi Koothu are reported here.",
+      "An inland district of the Northern Province. Parai Mela Koothu, Panri Koothu and Magudi Koothu are reported here.",
     grid: { col: 2, row: 3 },
   },
   {
@@ -38,7 +38,7 @@ export const regions: Region[] = [
     name: "Batticaloa and the Eastern Province",
     province: "Eastern Province",
     summary:
-      "The east coast, where Vadamodi Koothu, Thenmudi Koothu, Magudi Koothu and Parai Mela Koothu are reported.",
+      "The east coast, where Vadamodi Koothu, Thenmodi Koothu, Magudi Koothu and Parai Mela Koothu are reported.",
     grid: { col: 3, row: 4 },
   },
   {

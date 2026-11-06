@@ -36,7 +36,7 @@ export const articles: Article[] = [
     author: "Editorial team",
     date: "2026-11-06",
     readingMinutes: 4,
-    traditions: ["vadamodi-koothu", "thenmudi-koothu", "parai-mela-koothu", "udukku-vaasagappa", "kaman-koothu"],
+    traditions: ["vadamodi-koothu", "thenmodi-koothu", "parai-mela-koothu", "udukku-vaasagappa", "kaman-koothu"],
     kind: "Editorial note",
     body: [
       {
@@ -48,7 +48,7 @@ export const articles: Article[] = [
         h: "Words used in titles",
         p: [
           "Koothu: a Tamil word for a performance, commonly used for traditional folk theatre.",
-          "Vadam and Then: north and south. Together with modi (style), they give Vadamodi and Thenmudi.",
+          "Vadam and Then: north and south. Together with modi (style), they give Vadamodi and Thenmodi.",
           "Parai: a frame drum. Mela: an ensemble.",
           "Udukku: a small hourglass-shaped drum.",
           "Kaman: the Tamil name for Kama, the deity of love.",
@@ -57,7 +57,7 @@ export const articles: Article[] = [
       {
         h: "A caution on spelling",
         p: [
-          "Tamil names are romanised in several ways. Thenmudi is also written Thenmodi, and Vaasagappa may appear with different vowels. Search recognises the listed variants.",
+          "Tamil names are romanised in several ways. Thenmodi is also written Thenmudi, and Panri is also written Panni, and Vaasagappa may appear with different vowels. Search recognises the listed variants.",
         ],
       },
     ],

@@ -110,5 +110,10 @@ export interface MediaItem {
   /** Only licensed items are published. */
   status: "licensed";
   credit: string;
-  src?: string;
+  /** Path under /public, for example "/photos/vadamodi-1.jpg". */
+  src: string;
+  /** Describes the photograph for people using screen readers. */
+  alt: string;
+  /** Use as the main picture for its tradition (cards, page header). Only one per tradition. */
+  cover?: boolean;
 }

@@ -5,7 +5,8 @@ import { events } from "@/content/events";
 import { articles } from "@/content/articles";
 import { Reveal } from "@/components/Reveal";
 import { TraditionCard } from "@/components/TraditionCard";
-import { ButtonLink, SectionLabel, Plate } from "@/components/ui";
+import { ButtonLink, SectionLabel } from "@/components/ui";
+import { TraditionPhoto } from "@/components/TraditionPhoto";
 import { formatDate } from "@/lib/site";
 
 export default function Home() {
@@ -94,7 +95,7 @@ export default function Home() {
       {/* 5 Spotlight */}
       <section className="on-dark bg-burgundy text-parchment py-24">
         <div className="mx-auto max-w-7xl px-5 grid gap-12 lg:grid-cols-2 items-center">
-          <Reveal><Plate label={spotlight.name} tone="terracotta" className="aspect-[4/3]" /></Reveal>
+          <Reveal><TraditionPhoto slug={spotlight.slug} name={spotlight.name} tone="terracotta" className="aspect-[4/3]" /></Reveal>
           <Reveal delay={0.1}>
             <SectionLabel dark>Cultural Spotlight</SectionLabel>
             <h2 className="font-serif text-4xl md:text-5xl mt-4">{spotlight.name}</h2>

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { traditions, traditionBySlug } from "@/content/traditions";
 import { regionBySlug } from "@/content/regions";
 import { events } from "@/content/events";
 import { articles } from "@/content/articles";
 import { media } from "@/content/media";
-import { Badge, Plate, SectionLabel } from "@/components/ui";
+import { Badge, SectionLabel } from "@/components/ui";
+import { TraditionPhoto } from "@/components/TraditionPhoto";
 import { formatDate } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -41,7 +43,7 @@ export default async function Page({ params }: PageProps<"/traditions/[slug]">) 
             <p className="mt-6 text-xl text-cream/90 leading-relaxed max-w-xl">{t.summary}</p>
             <div className="mt-6"><Badge v={t.verification} onDark /></div>
           </div>
-          <Plate label={t.name} tone="cream" className="aspect-[4/3]" />
+          <TraditionPhoto slug={t.slug} name={t.name} tone="cream" priority className="aspect-[4/3]" />
         </div>
       </section>
 
@@ -74,7 +76,15 @@ export default async function Page({ params }: PageProps<"/traditions/[slug]">) 
           {gallery.length > 0 && (
             <section id="media" className="scroll-mt-24">
               <h2>Media</h2>
-              <p>{gallery.length} item(s) in the <Link href="/archive" className="underline">heritage archive</Link>.</p>
+              <ul className="not-prose grid gap-4 sm:grid-cols-2 my-4">
+                {gallery.map((m) => (
+                  <li key={m.id}>
+                    <div className="relative aspect-[4/3] bg-cream"><Image src={m.src} alt={m.alt} fill sizes="(min-width:640px) 40vw, 100vw" className="object-cover" /></div>
+                    <p className="text-sm mt-2">{m.caption} <span className="text-ink/60">Credit: {m.credit}</span></p>
+                  </li>
+                ))}
+              </ul>
+              <p>See more in the <Link href="/archive" className="underline">heritage archive</Link>.</p>
             </section>
           )}
 

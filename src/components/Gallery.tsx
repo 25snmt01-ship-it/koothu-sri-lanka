@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { MediaItem } from "@/lib/types";
-import { Plate } from "./ui";
 import { traditionBySlug } from "@/content/traditions";
 
 export function Gallery({ items }: { items: MediaItem[] }) {
@@ -21,7 +21,7 @@ export function Gallery({ items }: { items: MediaItem[] }) {
       <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {res.map((m) => (
           <li key={m.id}><button className="text-left w-full group" onClick={() => setOpen(m)}>
-            <Plate label={m.title} tone="cream" className="aspect-[4/3] group-hover:opacity-90" />
+            <div className="relative aspect-[4/3] bg-cream overflow-hidden"><Image src={m.src} alt={m.alt} fill sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw" className="object-cover group-hover:opacity-90" /></div>
             <p className="label text-[.6rem] text-terracotta mt-3">{m.kind}</p>
             <p className="font-serif text-lg text-burgundy">{m.title}</p>
           </button></li>
@@ -30,7 +30,7 @@ export function Gallery({ items }: { items: MediaItem[] }) {
       <dialog ref={ref} onClose={() => setOpen(null)} aria-label="Media viewer" className="m-auto max-w-2xl w-[92vw] p-0 backdrop:bg-black/70 bg-parchment">
         {open && (
           <div className="p-6">
-            <Plate label={open.title} className="aspect-[16/10]" />
+            <div className="relative aspect-[16/10] bg-cream"><Image src={open.src} alt={open.alt} fill sizes="(min-width:768px) 42rem, 92vw" className="object-contain" /></div>
             <p className="label text-[.65rem] text-terracotta mt-5">{open.kind}</p>
             <h2 className="font-serif text-3xl text-burgundy">{open.title}</h2>
             <p className="mt-3">{open.caption}</p>

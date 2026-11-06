@@ -1,13 +1,14 @@
 import Link from "next/link";
 import type { Tradition } from "@/lib/types";
 import { regionBySlug } from "@/content/regions";
-import { Badge, Plate } from "./ui";
+import { Badge } from "./ui";
+import { TraditionPhoto } from "./TraditionPhoto";
 
 export function TraditionCard({ t, tall }: { t: Tradition; tall?: boolean }) {
   return (
     <Link href={`/traditions/${t.slug}`} className="group block bg-parchment border border-cream hover:border-gold transition-colors">
       <div className="overflow-hidden">
-        <Plate label={t.name} tone={tall ? "terracotta" : "burgundy"} className={`${tall ? "aspect-[4/5]" : "aspect-[16/10]"} transition-transform duration-700 group-hover:scale-105`} />
+        <TraditionPhoto slug={t.slug} name={t.name} tone={tall ? "terracotta" : "burgundy"} className={`${tall ? "aspect-[4/5]" : "aspect-[16/10]"} transition-transform duration-700 group-hover:scale-105`} />
       </div>
       <div className="p-5">
         <div className="flex flex-wrap gap-2 items-center"><Badge v={t.verification} /></div>

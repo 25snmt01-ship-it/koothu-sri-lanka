@@ -22,10 +22,10 @@ export const traditions: Tradition[] = [
   {
     slug: "kathavarayan-koothu",
     name: "Kathavarayan Koothu",
-    regions: ["jaffna"],
+    regions: ["jaffna", "mullaitivu"],
     tagline: "A performance tradition named for the story of Kathavarayan.",
     summary:
-      "Kathavarayan Koothu takes its name from Kathavarayan, a figure whose story is known in Tamil narrative traditions. It is reported in Jaffna.",
+      "Kathavarayan Koothu takes its name from Kathavarayan, a figure whose story is known in Tamil narrative traditions. It is reported in Jaffna and Mullaitivu.",
     theme: "Named story",
     verification: "community-reported",
     sections: [
@@ -39,7 +39,29 @@ export const traditions: Tradition[] = [
       },
     ],
     gaps: gapList,
-    related: ["vadamodi-koothu", "kaman-koothu"],
+    related: ["kovalan-koothu", "vadamodi-koothu", "kaman-koothu"],
+  },
+  {
+    slug: "kovalan-koothu",
+    name: "Kovalan Koothu",
+    regions: ["mullaitivu"],
+    tagline: "A performance tradition named for Kovalan.",
+    summary:
+      "Kovalan is a central figure of the Tamil epic Silappatikaram. Kovalan Koothu is reported in Mullaitivu.",
+    theme: "Named story",
+    verification: "community-reported",
+    sections: [
+      provenance("Kovalan Koothu"),
+      {
+        title: "About the name",
+        verified: false,
+        paragraphs: [
+          "The title refers to Kovalan, whose story is told in the Silappatikaram. How the story is staged in Mullaitivu, and which episodes are performed, still needs to be documented with named sources.",
+        ],
+      },
+    ],
+    gaps: gapList,
+    related: ["kathavarayan-koothu"],
   },
   {
     slug: "vadamodi-koothu",
@@ -56,25 +78,25 @@ export const traditions: Tradition[] = [
         title: "Meaning of the name",
         verified: false,
         paragraphs: [
-          "Vadamodi is commonly translated as “northern style”. It is usually discussed alongside Thenmudi (“southern style”). The precise features that distinguish the two, and where each is practised, should be confirmed with published studies and with practitioners before being stated as fact.",
+          "Vadamodi is commonly translated as “northern style”. It is usually discussed alongside Thenmodi (“southern style”). The precise features that distinguish the two, and where each is practised, should be confirmed with published studies and with practitioners before being stated as fact.",
         ],
       },
     ],
     gaps: gapList,
-    related: ["thenmudi-koothu", "kathavarayan-koothu"],
+    related: ["thenmodi-koothu", "kathavarayan-koothu"],
   },
   {
-    slug: "thenmudi-koothu",
-    name: "Thenmudi Koothu",
-    variants: ["Thenmodi Koothu"],
+    slug: "thenmodi-koothu",
+    name: "Thenmodi Koothu",
+    variants: ["Thenmudi Koothu"],
     regions: ["batticaloa"],
     tagline: "Often described as the “southern style” of Tamil koothu.",
     summary:
-      "In Tamil, then means south. It is reported in Batticaloa and the Eastern Province. Romanised spellings vary, and “Thenmodi” also appears.",
+      "In Tamil, then means south. It is reported in Batticaloa and the Eastern Province. Romanised spellings vary, and “Thenmudi” also appears.",
     theme: "Style or school",
     verification: "terminology-note",
     sections: [
-      provenance("Thenmudi Koothu"),
+      provenance("Thenmodi Koothu"),
       {
         title: "Spelling and meaning",
         verified: false,
@@ -110,21 +132,22 @@ export const traditions: Tradition[] = [
     related: ["udukku-vaasagappa", "kaman-koothu"],
   },
   {
-    slug: "panni-koothu",
-    name: "Panni Koothu",
+    slug: "panri-koothu",
+    name: "Panri Koothu",
+    variants: ["Panni Koothu"],
     regions: ["vavuniya"],
     tagline: "A performance form reported in Vavuniya.",
     summary:
-      "Panni Koothu is reported in Vavuniya. The meaning of the title in this performance context has not yet been confirmed.",
+      "Panri Koothu is reported in Vavuniya. The meaning of the title in this performance context has not yet been confirmed.",
     theme: "Named story",
     verification: "community-reported",
     sections: [
-      provenance("Panni Koothu"),
+      provenance("Panri Koothu"),
       {
         title: "About the name",
         verified: false,
         paragraphs: [
-          "In everyday Tamil, panni can mean a pig or boar. Whether that is the sense intended here is not known, so no interpretation is offered until a source or practitioner confirms it.",
+          "In everyday Tamil, panri can mean a pig or boar. Whether that is the sense intended here is not known, so no interpretation is offered until a source or practitioner confirms it.",
         ],
       },
     ],
@@ -151,7 +174,7 @@ export const traditions: Tradition[] = [
       },
     ],
     gaps: gapList,
-    related: ["panni-koothu", "thenmudi-koothu"],
+    related: ["panri-koothu", "thenmodi-koothu"],
   },
   {
     slug: "vaasagappa",
