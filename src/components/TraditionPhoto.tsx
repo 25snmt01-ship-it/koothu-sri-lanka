@@ -10,7 +10,7 @@ export function TraditionPhoto({ slug, name, tone, className = "", sizes = "(min
   if (!m) return <Plate label={name} tone={tone} className={className} />;
   return (
     <div className={`relative overflow-hidden bg-cream ${className}`}>
-      <Image src={m.src} alt={m.alt} fill sizes={sizes} priority={priority} className="object-cover" />
+      <Image src={m.src} alt={m.alt} fill sizes={sizes} priority={priority} className="object-cover object-[50%_25%]" />
     </div>
   );
 }

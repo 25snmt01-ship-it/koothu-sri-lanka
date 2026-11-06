@@ -8,12 +8,12 @@ export const metadata: Metadata = { title: "Heritage Archive", description: "Pho
 
 export default function Page() {
   return (<>
-    <PageHero eyebrow="Heritage archive" title="Photographs, instruments and recordings" intro="Every item links to its tradition or region and carries a credit." />
+    <PageHero eyebrow="Heritage archive" title="Photographs, instruments and recordings" intro="Each photograph is linked to the tradition it shows." />
     <div className="mx-auto max-w-7xl px-5 py-14">
       {media.length ? <Gallery items={media} /> : (
         <div className="border border-dashed border-burgundy/40 p-12 text-center max-w-2xl mx-auto">
           <p className="font-serif text-3xl text-burgundy">The archive is being assembled.</p>
-          <p className="mt-3 leading-relaxed">Photographs, recordings and documents appear here once their rights are confirmed and credits recorded. If you hold material you are able to share, we would be glad to hear from you.</p>
+          <p className="mt-3 leading-relaxed">Photographs, recordings and documents appear here once their credits are recorded. If you hold material you are able to share, we would be glad to hear from you.</p>
           <p className="mt-6"><Link href="/contribute?type=media" className="label bg-burgundy text-parchment px-7 min-h-12 inline-flex items-center">Offer photographs or documents</Link></p>
         </div>
       )}

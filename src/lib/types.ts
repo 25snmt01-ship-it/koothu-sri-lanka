@@ -107,8 +107,8 @@ export interface MediaItem {
   caption: string;
   traditionSlug?: string;
   region?: RegionSlug;
-  /** Only licensed items are published. */
-  status: "licensed";
+  /** "contributed" items await confirmation of the photographer. */
+  status: "licensed" | "contributed";
   credit: string;
   /** Path under /public, for example "/photos/vadamodi-1.jpg". */
   src: string;
